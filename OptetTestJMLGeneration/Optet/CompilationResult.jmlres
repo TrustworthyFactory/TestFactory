@@ -1,0 +1,12 @@
+nullwarning: Could not locate the internal runtime classes - you may need to add the jmlruntime.jar explicitly on the command-line using -classpath.
+Note: plugins\org.jmlspecs.Specs_0.5.37\java5\java\util\Arrays.jml uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+1 warning
+warning: Could not locate the internal runtime classes - you may need to add the jmlruntime.jar explicitly on the command-line using -classpath.
+Note: plugins\org.jmlspecs.Specs_0.5.37\java5\java\util\Arrays.jml uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+1 warning
+warning: Could not locate the internal runtime classes - you may need to add the jmlruntime.jar explicitly on the command-line using -classpath.
+Note: plugins\org.jmlspecs.Specs_0.5.37\java5\java\util\Arrays.jml uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+1 warning

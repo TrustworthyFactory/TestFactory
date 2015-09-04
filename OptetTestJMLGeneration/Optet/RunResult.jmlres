@@ -1,0 +1,44 @@
+JUnit version 4.11
+..D:\works\security2011\optet\WP4\installKeplerAll\workspace\OptetTestJMLGeneration\src\test\java\com\thalesgroup\optet\example\privatedata\DataManagerTest.java:62: JML precondition is false
+		manager.getData();
+		               ^
+D:\works\security2011\optet\WP4\installKeplerAll\workspace\OptetTestJMLGeneration\src\main\java\com\thalesgroup\optet\example\privatedata\DataManager.java:41: Associated declaration: D:\works\security2011\optet\WP4\installKeplerAll\workspace\OptetTestJMLGeneration\src\test\java\com\thalesgroup\optet\example\privatedata\DataManagerTest.java:62: 
+	  @ requires !localData.getIsPrivate() || ( localData.getIsPrivate() && getIsAuthorized());
+	    ^
+
+Time: 0
+
+OK (2 tests)
+
+JUnit version 4.11
+.before sleep
+after sleep
+before sleep
+after sleep
+D:\works\security2011\optet\WP4\installKeplerAll\workspace\OptetTestJMLGeneration\src\test\java\com\thalesgroup\optet\example\duration\DurationTest.java:45: JML precondition is false
+		exec.checkTime();
+		              ^
+D:\works\security2011\optet\WP4\installKeplerAll\workspace\OptetTestJMLGeneration\src\main\java\com\thalesgroup\optet\example\duration\Execution.java:61: Associated declaration: D:\works\security2011\optet\WP4\installKeplerAll\workspace\OptetTestJMLGeneration\src\test\java\com\thalesgroup\optet\example\duration\DurationTest.java:45: 
+	  @ requires (endTime - startTime) < maxTime;
+	    ^
+before sleep
+after sleep
+get
+
+Time: 9
+
+OK (1 test)
+
+JUnit version 4.11
+.D:\works\security2011\optet\WP4\installKeplerAll\workspace\OptetTestJMLGeneration\src\test\java\fr\amossys\optet\example\sensitivedata\DataManagerTest.java:36: JML precondition is false
+		fixture.sendOverNetwork(data);
+		                       ^
+D:\works\security2011\optet\WP4\installKeplerAll\workspace\OptetTestJMLGeneration\src\main\java\fr\amossys\optet\example\sensitivedata\DataManager.java:38: Associated declaration: D:\works\security2011\optet\WP4\installKeplerAll\workspace\OptetTestJMLGeneration\src\test\java\fr\amossys\optet\example\sensitivedata\DataManagerTest.java:36: 
+	public void sendOverNetwork(SensitiveData data) {
+	                                          ^
+sent
+
+Time: 0
+
+OK (1 test)
+

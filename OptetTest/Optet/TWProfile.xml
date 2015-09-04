@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TWProfile>
+	<TWAttribute name="Maintainability" attributeID="44">
+ 		<Metric name="documented elements" metricID="253"
+			expectedValue="80"></Metric>
+	</TWAttribute>
+	<TWAttribute name="Flexibility/Robustness" attributeID="40">
+ 		<Metric name="interceptet errors" metricID="235"
+			expectedValue="100"></Metric>
+	</TWAttribute>
+	<TWAttribute name="Change Cycle/Stability" attributeID="25">
+ 		<Metric name="Compliance with best programing practices" metricID="1154"
+			expectedValue="60"></Metric>
+ 		<Metric name="unit test coverage for stability" metricID="1153"
+			expectedValue="60"></Metric>
+ 			</TWAttribute>
+	<TWAttribute name="Reliability" attributeID="41">
+ 		<Metric name="Reliability of Software" metricID="243"
+			expectedValue="90"></Metric>
+	</TWAttribute>
+	<TWAttribute name="Software Complexity" attributeID="41">
+ 		<Metric name="structure of the software" metricID="243"
+			expectedValue="90"></Metric>
+	</TWAttribute>
+</TWProfile>

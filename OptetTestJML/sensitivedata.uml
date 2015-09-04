@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_WA0V4Bl4EeSu9b2ekiuaoQ" name="model">
+  <packageImport xmi:id="_CpUfQBmEEeSu9b2ekiuaoQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_QdHbwBmDEeSu9b2ekiuaoQ" name="fr.amossys.optet.example.sensitivedata">
+    <packagedElement xmi:type="uml:Class" xmi:id="_UtaMQBmDEeSu9b2ekiuaoQ" name="SensitiveData">
+      <ownedAttribute xmi:id="_aHsqsBmDEeSu9b2ekiuaoQ" name="encrypted" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-19iYBmDEeSu9b2ekiuaoQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-2FeMBmDEeSu9b2ekiuaoQ" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_0KooIBmDEeSu9b2ekiuaoQ" name="confidential" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BJE50MyUEeS5LZG_y-WSfA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BJE50cyUEeS5LZG_y-WSfA" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_BJE50syUEeS5LZG_y-WSfA">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_but2YBmEEeSu9b2ekiuaoQ" name="encrypt" postcondition="__CCoQGwREeSb0Ml91VsY0w">
+        <ownedRule xmi:id="__CCoQGwREeSb0Ml91VsY0w" name="post-encrypt">
+          <specification xmi:type="uml:LiteralString" xmi:id="__CLyMGwREeSb0Ml91VsY0w" name="" value="getEncrypted();"/>
+        </ownedRule>
+      </ownedOperation>
+      <ownedOperation xmi:id="_cDoWcBmEEeSu9b2ekiuaoQ" name="decrypt" postcondition="_euvqkGwSEeSb0Ml91VsY0w">
+        <ownedRule xmi:id="_euvqkGwSEeSb0Ml91VsY0w" name="post_decrypt">
+          <specification xmi:type="uml:LiteralString" xmi:id="_euwRoGwSEeSb0Ml91VsY0w" value="!getEncrypted();"/>
+        </ownedRule>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_U_xHkBmDEeSu9b2ekiuaoQ" name="DataManager">
+      <ownedOperation xmi:id="_EXAzUBmIEeSu9b2ekiuaoQ" name="sendOverNetwork" precondition="_3rVgABmJEeSu9b2ekiuaoQ">
+        <ownedRule xmi:id="_3rVgABmJEeSu9b2ekiuaoQ" name="pre-sON">
+          <specification xmi:type="uml:LiteralString" xmi:id="_3rWuIBmJEeSu9b2ekiuaoQ" value="!data.getConfidential() || (data.getConfidential() &amp;&amp; data.getEncrypted());"/>
+        </ownedRule>
+        <ownedParameter xmi:id="_4fc6ABmIEeSu9b2ekiuaoQ" name="data" type="_UtaMQBmDEeSu9b2ekiuaoQ"/>
+      </ownedOperation>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_kDp4QMySEeS5LZG_y-WSfA" name="com.thalesgroup.optet.example.privatedata">
+    <packagedElement xmi:type="uml:Class" xmi:id="_oawbYMySEeS5LZG_y-WSfA" name="Data">
+      <ownedAttribute xmi:id="_igaHYMyTEeS5LZG_y-WSfA" name="isPrivate" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_k0XuEMyTEeS5LZG_y-WSfA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_k0XuEcyTEeS5LZG_y-WSfA" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_k0XuEsyTEeS5LZG_y-WSfA">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_DF8PIMyUEeS5LZG_y-WSfA" name="data" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UM3T0MyUEeS5LZG_y-WSfA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UM3T0cyUEeS5LZG_y-WSfA" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_UM3T0syUEeS5LZG_y-WSfA">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_YY-OcMzBEeS5LZG_y-WSfA" name="dataIsPrivate" postcondition="_S9_vIMyjEeS5LZG_y-WSfA">
+        <ownedRule xmi:id="_S9_vIMyjEeS5LZG_y-WSfA" name="is_private">
+          <specification xmi:type="uml:LiteralString" xmi:id="_S9_vIcyjEeS5LZG_y-WSfA" value="getIsPrivate();"/>
+        </ownedRule>
+      </ownedOperation>
+      <ownedOperation xmi:id="_bLfZYMzBEeS5LZG_y-WSfA" name="dataIsNotPrivate" postcondition="_jyiHsMzBEeS5LZG_y-WSfA">
+        <ownedRule xmi:id="_jyiHsMzBEeS5LZG_y-WSfA" name="is_not_private">
+          <specification xmi:type="uml:LiteralString" xmi:id="_jyiHsczBEeS5LZG_y-WSfA" value="!getIsPrivate();"/>
+        </ownedRule>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_GUIWgMyhEeS5LZG_y-WSfA" name="DataManager">
+      <ownedAttribute xmi:id="_BnKzsM1HEeS5LZG_y-WSfA" name="localData" visibility="private" type="_oawbYMySEeS5LZG_y-WSfA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DG_AoM1HEeS5LZG_y-WSfA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DIUdYM1HEeS5LZG_y-WSfA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_n6KQsM1LEeSiQ6yeI31BmA" name="isAuthorized" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oNrpoM1LEeSiQ6yeI31BmA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oNrpoc1LEeSiQ6yeI31BmA" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_oNrpos1LEeSiQ6yeI31BmA">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_JCKqEMyhEeS5LZG_y-WSfA" name="getData" precondition="_VnAocM1WEeSiQ6yeI31BmA">
+        <ownedRule xmi:id="_VnAocM1WEeSiQ6yeI31BmA" name="Constraint1">
+          <specification xmi:type="uml:LiteralString" xmi:id="_VnAocc1WEeSiQ6yeI31BmA" value="!localData.getIsPrivate() || ( localData.getIsPrivate() &amp;&amp; getIsAuthorized())"/>
+        </ownedRule>
+        <ownedParameter xmi:id="_DSsJUMyiEeS5LZG_y-WSfA" name="data" type="_oawbYMySEeS5LZG_y-WSfA" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_GcADoMyiEeS5LZG_y-WSfA" name="setData">
+        <ownedParameter xmi:id="_NAqDcMyiEeS5LZG_y-WSfA" name="data" type="_oawbYMySEeS5LZG_y-WSfA"/>
+      </ownedOperation>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_B-eBIM2OEeS_P_B7aasKmw" name="com.thalesgroup.optet.example.duration">
+    <packagedElement xmi:type="uml:Class" xmi:id="_twVwYM2MEeS_P_B7aasKmw" name="Execution">
+      <ownedAttribute xmi:id="_wQ-hIM2MEeS_P_B7aasKmw" name="startTime" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xgZhoM2MEeS_P_B7aasKmw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xgZhoc2MEeS_P_B7aasKmw" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_xgZhos2MEeS_P_B7aasKmw">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_0rfkoM2MEeS_P_B7aasKmw" name="endTime" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_06GBUM2MEeS_P_B7aasKmw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_06PyUM2MEeS_P_B7aasKmw" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_06PyUc2MEeS_P_B7aasKmw">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_mYQTEM2NEeS_P_B7aasKmw" name="maxTime" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nU6IkM2NEeS_P_B7aasKmw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nU6Ikc2NEeS_P_B7aasKmw" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_nU6Iks2NEeS_P_B7aasKmw">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedOperation xmi:id="__7qRUM2MEeS_P_B7aasKmw" name="Execute"/>
+      <ownedOperation xmi:id="_0Eh3sM7_EeSRcLnx5Tpazg" name="checkTime" precondition="_B8jLAM2NEeS_P_B7aasKmw">
+        <ownedRule xmi:id="_B8jLAM2NEeS_P_B7aasKmw" name="Constraint1">
+          <specification xmi:type="uml:LiteralString" xmi:id="_B8jLAc2NEeS_P_B7aasKmw" value="(endTime - startTime) &lt; maxTime"/>
+        </ownedRule>
+        <ownedRule xmi:id="_5gB8gM5OEeSnh9ctYJB4Fw" name="Constraint">
+          <specification xmi:type="uml:LiteralString" xmi:id="_5gB8gc5OEeSnh9ctYJB4Fw" name="constraintSpec"/>
+        </ownedRule>
+      </ownedOperation>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

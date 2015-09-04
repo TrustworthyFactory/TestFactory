@@ -1,0 +1,60 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+D:\works\security2011\optet\WP4\installKeplerAll\workspace\OptetTestJMLGeneration\src\main\java\fr\amossys\optet\example\sensitivedata\SensitiveData.java:45: warning: The prover cannot establish an assertion (Postcondition: D:\works\security2011\optet\WP4\installKeplerAll\workspace\OptetTestJMLGeneration\src\main\java\fr\amossys\optet\example\sensitivedata\SensitiveData.java:40: ) in method encrypt
+	public void encrypt() {
+	            ^
+D:\works\security2011\optet\WP4\installKeplerAll\workspace\OptetTestJMLGeneration\src\main\java\fr\amossys\optet\example\sensitivedata\SensitiveData.java:40: warning: Associated declaration: D:\works\security2011\optet\WP4\installKeplerAll\workspace\OptetTestJMLGeneration\src\main\java\fr\amossys\optet\example\sensitivedata\SensitiveData.java:45: 
+	  @ ensures getEncrypted();;  
+	    ^
+D:\works\security2011\optet\WP4\installKeplerAll\workspace\OptetTestJMLGeneration\src\main\java\fr\amossys\optet\example\sensitivedata\SensitiveData.java:56: warning: The prover cannot establish an assertion (Postcondition: D:\works\security2011\optet\WP4\installKeplerAll\workspace\OptetTestJMLGeneration\src\main\java\fr\amossys\optet\example\sensitivedata\SensitiveData.java:51: ) in method decrypt
+	public void decrypt() {
+	            ^
+D:\works\security2011\optet\WP4\installKeplerAll\workspace\OptetTestJMLGeneration\src\main\java\fr\amossys\optet\example\sensitivedata\SensitiveData.java:51: warning: Associated declaration: D:\works\security2011\optet\WP4\installKeplerAll\workspace\OptetTestJMLGeneration\src\main\java\fr\amossys\optet\example\sensitivedata\SensitiveData.java:56: 
+	  @ ensures !getEncrypted();;  
+	    ^
+4 warnings
